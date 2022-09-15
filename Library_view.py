@@ -5,25 +5,9 @@ def welcome_screen():
     2. Registration
     3. Exit
     '''
+    choice = input(options)
+    return choice
 
-def invalid_selection():
-    print("You have selected an invalid option, please try again")
-
-def login():
-    username = input("Enter your username: ")
-    password = input("Enter your password")
-
-def login_success():
-    print("Login success!")
-
-def invalid_username():
-    print("The username entered is invalid, please try again")
-
-def invalid_password():
-    print("The password you have entered in invalid, please try again")
-
-def invalid_credentials():
-    print("The credentials entered are invalid, please try again")
 
 def registration():
     username = input("Enter your username: ")
@@ -41,8 +25,10 @@ def registration():
     email = input("Enter your email address: ")
     contact_number = int(input("Enter your contact number: "))
 
+
 def registration_success():
     print("Account created successfully, please login to continue")
+
 
 def user_console():
     options = '''
@@ -50,6 +36,9 @@ def user_console():
     2. Account details
     3. Exit
     '''
+    choice = input(options)
+    return choice
+
 
 def user_account_details():
     print(username)
@@ -72,7 +61,34 @@ def admin_console():
     4. Check book details
     5. Exit
     '''
+    choice = input(options)
+    return choice
+
 
 def exit():
     print("You have exited successfully")
-    
+
+
+def invalid_selection():
+    print("You have selected an invalid option, please try again")
+
+
+def login():
+    username = input("Enter your username: ")
+    password = input("Enter your password")
+
+
+def login_success():
+    print("Login success!")
+
+
+def invalid_username():
+    print("The username entered is invalid, please try again")
+
+
+def invalid_password():
+    print("The password you have entered in invalid, please try again")
+
+
+def invalid_credentials():
+    print("The credentials entered are invalid, please try again")    
