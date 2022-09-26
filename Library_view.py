@@ -9,13 +9,17 @@ def welcome_screen():
     return choice
 
 
+def check_username():
+    username = input("Enter a username")
+    return username
+
 def registration():
-    username = input("Enter your username: ")
+    username = check_username()   
     password_1 = input("Enter your password: ")
     password_2 = input("Re-enter your password: ")
     if password_1 == password_2:
+        password = password_1
         print("passwords match")
-        return
     else:
         print("passwords do not match, please re-enter your password")
         registration():
@@ -40,11 +44,11 @@ def user_console():
     return choice
 
 
-def user_account_details():
-    print(username)
-    print(full_name)
-    print(email)
-    print(contact_number)
+#def user_account_details():
+    print(registration.username)
+    print(registration.full_name)
+    print(registration.email)
+    print(registration.contact_number)
     options = '''
     1. Change password
     2. Change email
@@ -84,6 +88,12 @@ def login_success():
 
 def invalid_username():
     print("The username entered is invalid, please try again")
+
+def unavailable_username():
+    print("The username selected is already in use, please enter another username")
+
+def available_username():
+    print("Username available, please proceed")
 
 
 def invalid_password():
